@@ -1,0 +1,33 @@
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+    <title>Cliente Web - SUChat.org</title>
+    <meta charset="utf-8"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Converse XMPP/Jabber Chat"/>
+    <meta name="keywords" content="xmpp chat webchat converse.js suchat.org" />
+    <link type="text/css" rel="stylesheet" media="screen" href="dist/converse.min.css" />
+    <script src="3rdparty/libsignal-protocol.js"></script>
+    <script src="dist/converse.min.js"></script>
+</head>
+<body class="converse-fullscreen">
+<noscript>Debe habilitar JavaScript para ejecutar la aplicación del WebChat</noscript>
+<div id="conversejs-bg"></div>
+<script>
+    converse.initialize({
+        authentication: 'login',
+        auto_away: 300,
+        auto_reconnect: true,
+		websocket_url: 'wss://redlibre.es:5443/ws',
+        message_archiving: 'always',
+        view_mode: 'fullscreen',
+		registration_domain:"redlibre.es",
+		allow_registration: false,
+		locked_domain:"redlibre.es",
+		reuse_scram_keys: true
+    });
+</script>
+</body>
+</html>
